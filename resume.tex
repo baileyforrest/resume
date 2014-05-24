@@ -1,0 +1,236 @@
+% resume.tex
+% Bailey Forrest (baileycforrest@gmail.com)
+%
+% Based on this template:
+% http://www.toofishes.net/blog/latex-resume-follow-up/
+%
+
+\documentclass[10pt, letterpaper]{article}
+\usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry}
+\usepackage{mdwlist}
+\usepackage{textcomp} % Symbols (\textbullet)
+\usepackage{tgpagella} % Alternative font
+\usepackage{enumitem} % setlist
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em} % No space between columns
+
+\setlist{nolistsep} % remove spaces before and after itemize
+
+\newcommand{\titleTopOffset}{-1.0em} % Space to add before section title
+\newcommand{\titleBotOffset}{-0.4em} % space to add after section title
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}
+    {\setlength{\leftmargin}{#1}}
+    \item[]
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]
+{\begin{list}{}
+    {\setlength{\leftmargin}{-0.5#1}}
+    \item[]
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    #1 & #2 \\
+\end{tabular*}}
+
+\newcommand{\sectionheader}[1]
+{\hrule
+\vspace{\titleTopOffset}
+\subsection*{#1}
+\vspace{\titleBotOffset}}
+
+
+% Content begins here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Bailey Forrest}}
+
+101 Butternut Court\ \ \textbullet \ \ Slippery Rock, PA 16057 \\
+(724) 421 7947\ \ \textbullet \ \ \texttt{bcforres@andrew.cmu.edu}\ \ \textbullet \ \ \texttt{github.com/bcforres}
+\end{center}
+
+\sectionheader{Education}
+\begin{itemize}
+    \item
+        \headerrow
+            {\textbf{Carnegie Mellon University}}
+            {\textbf{Pittsburgh, PA}}
+        \\
+        \headerrow
+            {\emph{Carnegie Institute of Technology, B.S. Electrical and Computer Engineering}}
+            {\emph{Class of 2015}}
+        \begin{itemize*}
+            \item GPA: 4.00 / 4.00
+        \end{itemize*}
+
+
+        \smallskip
+        \textbf{Relevant Completed Coursework:}
+
+        \begin{tabular*}{\linewidth}{p{0.5\linewidth}  p{0.5\linewidth}}
+            15410 - Operating System Design and Impl. & 18447 - Computer Architecture \\
+            15437 - Web Application Development & 18348 - Embedded Systems Engineering \\
+            15462 - Computer Graphics & 18487 - Computer Security and Applied Crypto. \\
+        \end{tabular*}
+
+
+        \smallskip
+        \textbf{Relevant Enrolled Coursework:}
+
+        \begin{tabular*}{\linewidth}{p{0.5\linewidth}  p{0.5\linewidth}}
+            15411 - Compiler Design & 18545 - Advanced Digital Design Project \\
+            15440 - Distributed Systems & \\
+        \end{tabular*}
+
+\end{itemize}
+
+
+\sectionheader{Skills}
+\begin{indentsection}{\parindent}
+    \hyphenpenalty=1000
+    \begin{description*}
+        \item[Programming Languages:]
+            C, C++, Java, JavaScript, Python, SML
+
+        \item[Hardware:]
+            Verilog, System Verilog
+
+        \item[Computers:]
+            Linux, Unix, HTML, CSS, SQL, Git, \LaTeX, Computer Repair
+
+    \end{description*}
+\end{indentsection}
+
+
+\sectionheader{Work Experience}
+\begin{itemize}
+    \item
+        \headerrow
+            {\textbf{Spin Fusion}}
+            {\textbf{Denver, CO}}
+        \\
+        \headerrow
+            {\emph{Software Developer Intern}}
+            {\emph{Summer 2013}}
+        \begin{itemize*}
+            \item Worked on Spin Schedule web app, which provides schedule
+                generation and management for hospitals
+
+            \item Designed and led development of a REST API as a general
+                purpose interface to the web application
+
+            \item Worked other projects such as SMS notification services,
+                single sign on, and front end features
+
+        \end{itemize*}
+
+    \item
+        \headerrow
+            {\textbf{CMU Computer Science Department}}
+            {\textbf{Pittsburgh, PA}}
+        \\
+        \headerrow
+            {\emph{Teaching Assistant for 15214 - Principles of Software Construction}}
+            {\emph{Fall 2013}}
+        \begin{itemize*}
+            \item Teaching assistant for a course about software design and concurrency
+
+            \item Led a weekly recitation on class materials
+
+            \item Held other duties including creating course content, grading,
+                and office hours
+        \end{itemize*}
+
+\end{itemize}
+
+
+\sectionheader{Projects}
+\begin{itemize}
+    \item
+        \headerrow
+            {\textbf{Pebbles Kernel and utilities}}
+            {\textbf{Spring 2014}}
+        \\
+        \headerrow
+            {\emph{CMU 15410}}
+            {\emph{Tools Used: C, x86 assembly}}
+        \begin{itemize*}
+            \item Designed and implemented a Unix-inspired OS kernel.
+
+            \item Implemented core features such as virtual memory, resource
+                management, thread and process management, program loader, and
+                hardware drivers.
+
+            \item Implemented a multiboot compatible boot loader capable of
+                loading pebbles and other OSs
+
+            \item Implemented a userspace thread library including thread
+                creation, management, and synchronization primitives (mutex,
+                condition variable, semaphore, readers writers lock)
+        \end{itemize*}
+
+    \item
+        \headerrow
+            {\textbf{Ray Tracer}}
+            {\textbf{Spring 2014}}
+        \\
+        \headerrow
+            {\emph{CMU 15462}}
+            {\emph{Tools Used: C++}}
+        \begin{itemize*}
+            \item Implemented a ray tracer handling specular reflections and
+                transmission through dielectrics.
+
+            \item Awarded bonus points for having the highest performance ray
+                tracer in the class by using an efficient bounding volume
+                hierarchy.
+        \end{itemize*}
+
+    \item
+        \headerrow
+            {\textbf{Pipelined ARM Processor}}
+            {\textbf{Spring 2014}}
+        \\
+        \headerrow
+            {\emph{CMU 18447}}
+            {\emph{Tools Used: Verilog}}
+        \begin{itemize*}
+            \item Created a Verilog description for a pipelined
+                microarchitecture implementing a subset of the ARM ISA
+
+            \item Awarded bonus points for having the highest performance branch
+                predictor in the class
+        \end{itemize*}
+
+
+    \item
+        \headerrow
+            {\textbf{Spin Schedule REST API}}
+            {\textbf{Summer 2013}}
+        \\
+        \headerrow
+            {\emph{Spin Fusion}}
+            {\emph{Tools Used: Java, Jersey}}
+        \begin{itemize*}
+            \item Designed and led development of a REST API to provide a
+                general purpose interface to the Spin Schedule web application's
+                features through HTTP requests, easing development of internal
+                and 3rd party apps
+
+            \item Provided support for other interns while they used the API in
+                their own projects
+        \end{itemize*}
+
+\end{itemize}
+
+\end{document}
