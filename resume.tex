@@ -6,7 +6,7 @@
 %
 
 \documentclass[10pt, letterpaper]{article}
-\usepackage[letterpaper, top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry}
+\usepackage[letterpaper, top=0.4in, bottom=0.4in, left=0.75in, right=0.75in]{geometry}
 \usepackage{mdwlist}
 \usepackage{textcomp} % Symbols (\textbullet)
 \usepackage{tgpagella} % Alternative font
@@ -56,7 +56,7 @@
 {\LARGE \textbf{Bailey Forrest}}
 
 101 Butternut Court\ \ \textbullet \ \ Slippery Rock, PA 16057 \\
-(724) 421 7947\ \ \textbullet \ \ \texttt{bcforres@andrew.cmu.edu}\ \ \textbullet \ \ \texttt{github.com/bcforres}
+\texttt{bcforres@andrew.cmu.edu}\ \ \textbullet \ \ (724) 421 7974\ \ \textbullet \ \ \texttt{github.com/bcforres}\ \ \textbullet \ \ \texttt{linkedin.com/in/bcforres}
 \end{center}
 
 \sectionheader{Education}
@@ -99,14 +99,16 @@
 \begin{indentsection}{\parindent}
     \hyphenpenalty=1000
     \begin{description*}
-        \item[Programming:]
-            C, C++, Assembly (x86, ARM, HC12), Java, JavaScript, Python, SML
+        \item[Languages/Scripts:]
+            C, C++, Assembly (x86, ARM, HC12), Java, JavaScript, Python, SML,
+            HTML, CSS, SQL
 
         \item[Hardware:]
             Verilog, System Verilog
 
         \item[Computers:]
-            Linux, Unix, HTML, CSS, SQL, Git, \LaTeX, Computer Repair
+            Version control (git, svn, hg, p4), Linux, Unix, \LaTeX,
+            Computer Repair
 
     \end{description*}
 \end{indentsection}
@@ -116,11 +118,32 @@
 \begin{itemize}
     \item
         \headerrow
+            {\textbf{Nvidia Corporation}}
+            {\textbf{Santa Clara, CA}}
+        \\
+        \headerrow
+            {\emph{Software Engineering Intern}}
+            {\emph{Summer 2014}}
+        \begin{itemize*}
+            \item Worked on Unified Virtual Memory (UVM) windows driver. UVM
+                allows CUDA applications to share the same pointer on both CPU
+                and GPU accesses in order to avoid manual data migration
+
+            \item Primary task was implementing the replayable fault handling
+                infrastructure for the next generation GPU
+
+            \item Performed other tasks such as writing tests and
+                refactoring code
+
+        \end{itemize*}
+
+    \item
+        \headerrow
             {\textbf{Spin Fusion}}
             {\textbf{Denver, CO}}
         \\
         \headerrow
-            {\emph{Software Developer Intern}}
+            {\emph{Software Engineering Intern}}
             {\emph{Summer 2013}}
         \begin{itemize*}
             \item Worked on Spin Schedule web app, which provides schedule
@@ -159,6 +182,24 @@
 \begin{itemize}
     \item
         \headerrow
+            {\textbf{UVM Fault Handler}}
+            {\textbf{Summer 2014}}
+        \\
+        \headerrow
+            {\emph{Nvidia Corporation}}
+            {\emph{Tools Used: C}}
+        \begin{itemize*}
+            \item Implemented replayable fault handling infrastructure for UVM
+                on Windows for the next generation GPU
+
+            \item Worked extensively with the software chip simulator for the
+                GPU, aided in support for Windows x64
+
+            \item Wrote tests to ensure proper faulting behavior and handling
+        \end{itemize*}
+
+    \item
+        \headerrow
             {\textbf{Pebbles Kernel and Utilities}}
             {\textbf{Spring 2014}}
         \\
@@ -168,9 +209,9 @@
         \begin{itemize*}
             \item Designed and implemented a Unix-inspired OS kernel
 
-            \item Implemented core features such as virtual memory, resource
-                management, thread and process management, program loader, and
-                hardware drivers
+            \item Implemented core kernel features such as virtual memory,
+                resource management, thread and process management, program
+                loader, and hardware drivers
 
             \item Implemented a multiboot compatible boot loader capable of
                 loading pebbles and other OSs
@@ -194,23 +235,6 @@
 
             \item Awarded bonus points for having the highest performance branch
                 predictor in the class
-        \end{itemize*}
-
-    \item
-        \headerrow
-            {\textbf{Ray Tracer}}
-            {\textbf{Spring 2014}}
-        \\
-        \headerrow
-            {\emph{CMU 15462}}
-            {\emph{Tools Used: C++}}
-        \begin{itemize*}
-            \item Implemented a ray tracer handling specular reflections and
-                transmission through dielectrics
-
-            \item Awarded bonus points for having the highest performance ray
-                tracer in the class by using an efficient bounding volume
-                hierarchy
         \end{itemize*}
 
     \item
